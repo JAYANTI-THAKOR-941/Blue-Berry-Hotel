@@ -11,6 +11,8 @@ import Checkout from './pages/Checkout'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Services from './pages/Services'
+import RoomManagement from './admin/RoomManagement'
+import ProtectedRoute from './components/ProtectedRoute'
 
 const App = () => {
   return (
@@ -28,6 +30,9 @@ const App = () => {
           <Route path='/services' element={<Services/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/contact' element={<Contact/>}/>
+          <Route element={<ProtectedRoute/>}>
+            <Route path='/room-management' element={<RoomManagement/>}/>
+          </Route>
         </Routes>
 
       <Footer/>

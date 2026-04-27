@@ -1,9 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "./main.css";
 import { Link } from "react-router-dom";
+import { signInWithPopup ,signOut,onAuthStateChanged} from "firebase/auth";
+
+import { auth,provider } from "../firebase";
+
 
 const Login = () => {
+
+  const [user,setUser] = useState(null);
+
+  if(user){
+    localStorage.setItem('auth-user',JSON.stringify(user));
+  }
+
+  const login = async()=>{
+    try{
+      await signInWithPopup(auth,provider);
+      alert('Login successfully');
+    }
+    catch(err){
+      console.log('Failed to login using google.!!',err);
+    }
+  }
+  const logout = async()=>{
+    await signOut(auth);
+    alert('Logout successfully.');
+    localStorage.removeItem('auth-user');
+  }
+
+
+  useEffect(()=>{
+    const stop = onAuthStateChanged(auth,(currentUser)=>{
+      setUser(currentUser);
+    });
+    return ()=>stop();
+  },[])
+
   return (
     <div className="auth-wrapper">
 
@@ -32,6 +66,9 @@ const Login = () => {
 
           <button type="submit">Login</button>
         </form>
+
+        <button onClick={login}>Continue With Google</button>
+        <button onClick={logout}>Logout</button>
 
         <div className="auth-footer">
           <p>Don't have an account? <Link to="/register">Register</Link></p>

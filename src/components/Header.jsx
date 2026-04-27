@@ -15,6 +15,7 @@ const Header = () => {
         <Link to='/services'>Services</Link>
         <Link to='/about'>About Us</Link>
         <Link to='/contact'>Contact Us</Link>
+        {/* {user.email === 'rwgn1.jayanti.rt@gmail.com' &&<Link to='/room-management'>Room Management</Link>} */}
       </div>
       <div className="btn">
         <button onClick={()=>navigate('/login')}>Login</button>

@@ -1,3 +1,5 @@
+/* HERO SECTION */
+
 .hotel-hero {
   width: 100%;
   height: 100vh;
@@ -9,7 +11,8 @@
   justify-content: center;
 }
 
-/* Dark overlay */
+/* Dark Overlay */
+
 .overlay {
   position: absolute;
   width: 100%;
@@ -36,6 +39,7 @@
   margin: 20px 0;
   font-size: 18px;
   color: #ddd;
+  line-height: 1.8;
 }
 
 .hotel-buttons {
@@ -52,7 +56,8 @@
   transition: 0.3s;
 }
 
-/* Gold luxury button */
+/* Gold Luxury Button */
+
 .primary {
   background: #c59d5f;
   color: #fff;
@@ -62,7 +67,8 @@
   background: #a67c3d;
 }
 
-/* Outline button */
+/* Outline Button */
+
 .secondary {
   background: transparent;
   border: 2px solid #fff;
@@ -74,7 +80,155 @@
   color: #000;
 }
 
-/* Responsive */
+/* COMMON SECTION */
+
+.section-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 40px;
+  color: #c59d5f;
+  margin-bottom: 15px;
+}
+
+.section-title p {
+  font-size: 17px;
+  color: #666;
+}
+
+/* ABOUT SECTION */
+
+.about-home {
+  padding: 100px 0;
+  background: #fffaf7;
+}
+
+.about-home .section-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text h2 {
+  font-size: 40px;
+  color: #c59d5f;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.9;
+  margin-bottom: 25px;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(197, 157, 95, 0.1);
+}
+
+/* SERVICES SECTION */
+
+.services-home {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.services-grid {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(197, 157, 95, 0.08);
+  border-top: 4px solid #c59d5f;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-card h3 {
+  font-size: 24px;
+  color: #c59d5f;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: #555;
+  line-height: 1.7;
+}
+
+
+/* TESTIMONIAL SECTION */
+
+.testimonial-home {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.testimonial-grid {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(197, 157, 95, 0.08);
+  text-align: center;
+}
+
+.testimonial-card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.testimonial-card h4 {
+  color: #c59d5f;
+  font-size: 18px;
+}
+
+/* RESPONSIVE */
+
 @media (max-width: 768px) {
   .hotel-content h1 {
     font-size: 36px;
@@ -83,8 +237,16 @@
   .hotel-content p {
     font-size: 16px;
   }
-}
 
+  .section-title h2,
+  .about-text h2 {
+    font-size: 30px;
+  }
+
+  .about-home .section-container {
+    flex-direction: column;
+  }
+}
 
 /* room page design */
 .rooms {
@@ -421,5 +583,539 @@
 
   .auth-right {
     padding: 30px;
+  }
+}
+
+/* about us */
+/* About.css */
+
+.about-section {
+  width: 100%;
+  background: #fffaf7;
+  padding-bottom: 80px;
+  font-family: Arial, sans-serif;
+}
+
+/* Banner */
+
+.about-banner {
+  background: linear-gradient(to right, #c59d5f, #a67c3d);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.about-banner h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.about-banner p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+/* Main Content */
+
+.about-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(197, 157, 95, 0.18);
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text h2 {
+  font-size: 38px;
+  color: #c59d5f;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+.about-text button {
+  padding: 14px 30px;
+  background: #c59d5f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.about-text button:hover {
+  background: #a67c3d;
+  transform: translateY(-3px);
+}
+
+/* Highlights */
+
+.hotel-highlights {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.highlight-card {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(197, 157, 95, 0.08);
+  transition: 0.3s;
+  border-top: 4px solid #c59d5f;
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px);
+}
+
+.highlight-card h3 {
+  color: #c59d5f;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.highlight-card p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Why Choose Us */
+
+.why-choose-us {
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto 0;
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  font-size: 40px;
+  color: #c59d5f;
+  margin-bottom: 40px;
+}
+
+.choose-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.choose-box {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 6px 20px rgba(197, 157, 95, 0.06);
+  transition: 0.3s;
+  border: 1px solid #f1e3c8;
+}
+
+.choose-box:hover {
+  background: #fff8ee;
+  transform: scale(1.03);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .about-banner h1 {
+    font-size: 34px;
+  }
+
+  .about-banner p {
+    font-size: 16px;
+  }
+
+  .about-text h2 {
+    font-size: 30px;
+  }
+
+  .why-choose-us h2 {
+    font-size: 30px;
+  }
+
+  .about-content {
+    margin: 60px auto;
+  }
+}
+
+/* Contact.css */
+
+.contact-section {
+  width: 100%;
+  background: #fffaf7;
+  padding-bottom: 80px;
+  font-family: Arial, sans-serif;
+}
+
+/* Banner */
+
+.contact-banner {
+  background: linear-gradient(to right, #c59d5f, #a67c3d);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.contact-banner h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.contact-banner p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+/* Main Container */
+
+.contact-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Left Side */
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info h2 {
+  font-size: 38px;
+  color: #c59d5f;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.info-box {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(197, 157, 95, 0.08);
+  border-left: 4px solid #c59d5f;
+}
+
+.info-box h3 {
+  margin-bottom: 10px;
+  color: #c59d5f;
+  font-size: 20px;
+}
+
+.info-box p {
+  margin: 0;
+  color: #555;
+  font-size: 15px;
+}
+
+/* Right Side Form */
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(197, 157, 95, 0.08);
+}
+
+.contact-form h2 {
+  font-size: 34px;
+  color: #c59d5f;
+  margin-bottom: 25px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #e5d5b8;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #c59d5f;
+  box-shadow: 0 0 0 3px rgba(197, 157, 95, 0.1);
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form button {
+  padding: 15px;
+  background: #c59d5f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #a67c3d;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .contact-banner h1 {
+    font-size: 34px;
+  }
+
+  .contact-banner p {
+    font-size: 16px;
+  }
+
+  .contact-info h2,
+  .contact-form h2 {
+    font-size: 28px;
+  }
+
+  .contact-container {
+    margin: 60px auto;
+  }
+}
+
+/* Services.css */
+
+.services-section {
+  width: 100%;
+  background: #fffaf7;
+  padding-bottom: 80px;
+  font-family: Arial, sans-serif;
+}
+
+/* Banner Section */
+
+.services-banner {
+  background: linear-gradient(to right, #c59d5f, #a67c3d);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.services-banner h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.services-banner p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+/* Services Cards */
+
+.services-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: white;
+  padding: 35px 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(197, 157, 95, 0.08);
+  transition: 0.3s;
+  border-top: 4px solid #c59d5f;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-icon {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.service-card h2 {
+  font-size: 24px;
+  color: #c59d5f;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* Why Choose Us */
+
+.why-choose-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.why-choose-section h2 {
+  font-size: 40px;
+  color: #c59d5f;
+  margin-bottom: 40px;
+}
+
+.choose-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.choose-box {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 8px 20px rgba(197, 157, 95, 0.06);
+  border: 1px solid #f1e3c8;
+  transition: 0.3s;
+}
+
+.choose-box:hover {
+  background: #fff8ee;
+  transform: scale(1.03);
+}
+
+/* Additional Guest Facilities */
+
+.extra-services {
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto 0;
+  text-align: center;
+}
+
+.extra-services h2 {
+  font-size: 40px;
+  color: #c59d5f;
+  margin-bottom: 40px;
+}
+
+.extra-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.extra-box {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(197, 157, 95, 0.08);
+  transition: 0.3s;
+}
+
+.extra-box:hover {
+  transform: translateY(-6px);
+}
+
+.extra-box h3 {
+  font-size: 22px;
+  color: #c59d5f;
+  margin-bottom: 15px;
+}
+
+.extra-box p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .services-banner h1 {
+    font-size: 34px;
+  }
+
+  .services-banner p {
+    font-size: 16px;
+  }
+
+  .why-choose-section h2,
+  .extra-services h2 {
+    font-size: 30px;
+  }
+
+  .services-container {
+    margin: 60px auto;
   }
 }

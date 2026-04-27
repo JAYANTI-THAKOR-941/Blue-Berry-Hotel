@@ -1,7 +1,7 @@
 {
   "rooms": [
     {
-      "id": 1,
+      "id": "1",
       "roomNumber": "101",
       "type": "Single",
       "category": "Standard",
@@ -14,7 +14,12 @@
       "rating": 4.2,
       "reviews": 120,
       "description": "Cozy single room perfect for solo travelers.",
-      "amenities": ["WiFi", "AC", "TV", "Room Service"],
+      "amenities": [
+        "WiFi",
+        "AC",
+        "TV",
+        "Room Service"
+      ],
       "images": [
         "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
         "https://images.unsplash.com/photo-1566665797739-1674de7a421a",
@@ -26,7 +31,7 @@
       "createdAt": "2026-04-20"
     },
     {
-      "id": 2,
+      "id": "2",
       "roomNumber": "102",
       "type": "Double",
       "category": "Deluxe",
@@ -39,7 +44,13 @@
       "rating": 4.5,
       "reviews": 200,
       "description": "Spacious double room with modern amenities.",
-      "amenities": ["WiFi", "AC", "TV", "Mini Fridge", "Balcony"],
+      "amenities": [
+        "WiFi",
+        "AC",
+        "TV",
+        "Mini Fridge",
+        "Balcony"
+      ],
       "images": [
         "https://images.unsplash.com/photo-1590490360182-c33d57733427",
         "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
@@ -51,7 +62,7 @@
       "createdAt": "2026-04-20"
     },
     {
-      "id": 3,
+      "id": "3",
       "roomNumber": "201",
       "type": "Deluxe",
       "category": "Premium",
@@ -64,7 +75,14 @@
       "rating": 4.7,
       "reviews": 340,
       "description": "Luxury room with balcony and city view.",
-      "amenities": ["WiFi", "AC", "TV", "Mini Fridge", "Balcony", "Work Desk"],
+      "amenities": [
+        "WiFi",
+        "AC",
+        "TV",
+        "Mini Fridge",
+        "Balcony",
+        "Work Desk"
+      ],
       "images": [
         "https://images.unsplash.com/photo-1618773928121-c32242e63f39",
         "https://images.unsplash.com/photo-1584132967334-10e028bd69f7",
@@ -76,7 +94,7 @@
       "createdAt": "2026-04-20"
     },
     {
-      "id": 4,
+      "id": "4",
       "roomNumber": "301",
       "type": "Suite",
       "category": "Luxury",
@@ -89,7 +107,15 @@
       "rating": 4.9,
       "reviews": 500,
       "description": "Premium suite with kitchen and living area.",
-      "amenities": ["WiFi", "AC", "TV", "Mini Fridge", "Balcony", "Kitchen", "Sofa"],
+      "amenities": [
+        "WiFi",
+        "AC",
+        "TV",
+        "Mini Fridge",
+        "Balcony",
+        "Kitchen",
+        "Sofa"
+      ],
       "images": [
         "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2",
         "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
@@ -101,7 +127,7 @@
       "createdAt": "2026-04-20"
     },
     {
-      "id": 5,
+      "id": "5",
       "roomNumber": "302",
       "type": "Single",
       "category": "Economy",
@@ -111,10 +137,14 @@
       "maxGuests": 1,
       "bedType": "Single Bed",
       "floor": 3,
-      "rating": 4.0,
+      "rating": 4,
       "reviews": 80,
       "description": "Affordable single room with essential amenities for budget travelers.",
-      "amenities": ["WiFi", "Fan", "TV"],
+      "amenities": [
+        "WiFi",
+        "Fan",
+        "TV"
+      ],
       "images": [
         "https://images.unsplash.com/photo-1555854877-bab0e564b8d5",
         "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
@@ -126,7 +156,7 @@
       "createdAt": "2026-04-20"
     },
     {
-      "id": 6,
+      "id": "6",
       "roomNumber": "202",
       "type": "Double",
       "category": "Standard",
@@ -139,7 +169,12 @@
       "rating": 4.3,
       "reviews": 150,
       "description": "Comfortable double room with elegant interiors and modern facilities.",
-      "amenities": ["WiFi", "AC", "TV", "Room Service"],
+      "amenities": [
+        "WiFi",
+        "AC",
+        "TV",
+        "Room Service"
+      ],
       "images": [
         "https://images.unsplash.com/photo-1560448204-603b3fc33ddc",
         "https://images.unsplash.com/photo-1616594039964-ae9021a400a0",
@@ -151,7 +186,7 @@
       "createdAt": "2026-04-20"
     },
     {
-      "id": 7,
+      "id": "7",
       "roomNumber": "401",
       "type": "Family",
       "category": "Premium",
@@ -164,7 +199,14 @@
       "rating": 4.6,
       "reviews": 260,
       "description": "Spacious family room ideal for group stays with extra comfort.",
-      "amenities": ["WiFi", "AC", "TV", "Mini Fridge", "Balcony", "Sofa"],
+      "amenities": [
+        "WiFi",
+        "AC",
+        "TV",
+        "Mini Fridge",
+        "Balcony",
+        "Sofa"
+      ],
       "images": [
         "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf",
         "https://images.unsplash.com/photo-1616047006789-b7af5afb8c20",
@@ -176,7 +218,7 @@
       "createdAt": "2026-04-20"
     },
     {
-      "id": 8,
+      "id": "8",
       "roomNumber": "501",
       "type": "Suite",
       "category": "Presidential",
@@ -186,10 +228,18 @@
       "maxGuests": 6,
       "bedType": "King Size Bed",
       "floor": 5,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 120,
       "description": "Top-class presidential suite with luxury interiors and premium services.",
-      "amenities": ["WiFi", "AC", "TV", "Mini Fridge", "Balcony", "Kitchen", "Jacuzzi"],
+      "amenities": [
+        "WiFi",
+        "AC",
+        "TV",
+        "Mini Fridge",
+        "Balcony",
+        "Kitchen",
+        "Jacuzzi"
+      ],
       "images": [
         "https://images.unsplash.com/photo-1578683010236-d716f9a3f461",
         "https://images.unsplash.com/photo-1600585152220-90363fe7e115",
@@ -204,5 +254,6 @@
   "bookings": [],
   "users": [],
   "foodItems": [],
-  "services": []
+  "services": [],
+  "$schema": "./node_modules/json-server/schema.json"
 }

@@ -1119,3 +1119,141 @@
     margin: 60px auto;
   }
 }
+
+
+/* checkout.css */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+}
+
+/* MAIN LAYOUT */
+.checkout-page {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+}
+
+/* LEFT SIDE */
+.room-details {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.room-image {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.room-desc {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* PRICE */
+.price-box {
+  margin: 15px 0;
+}
+
+.price-box .original {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 10px;
+}
+
+.price-box .discount {
+  color: green;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.price-box h2 {
+  margin: 5px 0;
+}
+
+.price-box span {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ROOM INFO */
+.room-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* AMENITIES */
+.amenities {
+  margin-top: 15px;
+}
+
+.amenities ul {
+  list-style: none;
+  padding: 0;
+}
+
+.amenities li {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+/* RIGHT SIDE */
+.checkout-container {
+  flex: 1;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checkout-form input,
+.checkout-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.checkout-form label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.summary {
+  background: #f0f4ff;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #357abd;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .checkout-page {
+    flex-direction: column;
+  }
+}

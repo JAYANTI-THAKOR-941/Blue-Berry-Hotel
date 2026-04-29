@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import api from "../services/api";
 import "./main.css";
@@ -7,6 +7,9 @@ import "./main.css";
 const RoomDescription = () => {
   const [room, setRoom] = useState(null);
   const [activeImg, setActiveImg] = useState("");
+
+
+  const navigate = useNavigate();
 
   const { id } = useParams();
 
@@ -92,6 +95,7 @@ const RoomDescription = () => {
           <button
             className={`book-btn ${!room.isAvailable ? "disabled" : ""}`}
             disabled={!room.isAvailable}
+            onClick={() => navigate('/checkout',{state:{roomId:room.id}})}
           >
             {room.isAvailable ? "Book Now" : "Not Available"}
           </button>

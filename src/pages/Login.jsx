@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "./main.css";
-import { Link } from "react-router-dom";
-import { signInWithPopup ,signOut,onAuthStateChanged} from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { signInWithPopup, onAuthStateChanged } from "firebase/auth";
 
 import { auth,provider } from "../firebase";
 
@@ -10,6 +10,7 @@ import { auth,provider } from "../firebase";
 const Login = () => {
 
   const [user,setUser] = useState(null);
+  const navigate = useNavigate();
 
   if(user){
     localStorage.setItem('auth-user',JSON.stringify(user));
@@ -18,16 +19,11 @@ const Login = () => {
   const login = async()=>{
     try{
       await signInWithPopup(auth,provider);
-      alert('Login successfully');
+      navigate('/');
     }
     catch(err){
       console.log('Failed to login using google.!!',err);
     }
-  }
-  const logout = async()=>{
-    await signOut(auth);
-    alert('Logout successfully.');
-    localStorage.removeItem('auth-user');
   }
 
 
@@ -57,21 +53,14 @@ const Login = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7 }}
       >
-        <h2>Login</h2>
-        <p>Enter your credentials</p>
+        <h2>Welcome Back</h2>
+        <p>Sign in to your account</p>
 
-        <form>
-          <input type="email" placeholder="Email Address" />
-          <input type="password" placeholder="Password" />
-
-          <button type="submit">Login</button>
-        </form>
-
-        <button onClick={login}>Continue With Google</button>
-        <button onClick={logout}>Logout</button>
-
-        <div className="auth-footer">
-          <p>Don't have an account? <Link to="/register">Register</Link></p>
+        <div className="google-btn-container">
+          <button className="google-login-btn" onClick={login}>
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google Logo" className="google-icon" />
+            Sign in with Google
+          </button>
         </div>
       </motion.div>
 

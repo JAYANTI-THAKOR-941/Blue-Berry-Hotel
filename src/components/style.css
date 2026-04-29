@@ -149,3 +149,56 @@
     font-size: 15px;
   }
 }
+
+/* Profile Menu */
+.profile-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+    border: 2px solid #c59d5f;
+    transition: transform 0.2s ease-in-out;
+}
+
+.profile-icon:hover {
+    transform: scale(1.05);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: 180px;
+    z-index: 1000;
+}
+
+.dropdown-menu button {
+    background: none;
+    border: none;
+    color: #333;
+    padding: 12px 20px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 0;
+    transition: background-color 0.2s;
+}
+
+.dropdown-menu button:hover {
+    background-color: #f8f9fa;
+    color: #c59d5f;
+}

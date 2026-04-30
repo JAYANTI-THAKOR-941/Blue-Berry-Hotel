@@ -1,121 +1,101 @@
-import React from 'react'
-import './main.css'
+import React from "react";
+import { motion } from "framer-motion";
+import "./pages.css";
+
+const servicesList = [
+  { icon: "🛏", title: "Luxury Rooms", desc: "Spacious deluxe rooms and premium suites designed for comfort, elegance, and peaceful relaxation." },
+  { icon: "🍽", title: "Fine Dining", desc: "Enjoy delicious cuisines from our master chefs in elegant dining spaces with unforgettable experiences." },
+  { icon: "🏊", title: "Swimming Pool & Spa", desc: "Refresh your mind and body with our luxury pool, wellness spa, and rejuvenating treatments." },
+  { icon: "💍", title: "Wedding & Events", desc: "Perfect banquet halls and event spaces for weddings, parties, and special celebrations." },
+  { icon: "🚗", title: "Free Parking", desc: "Safe and spacious parking with 24/7 security for all hotel guests." },
+  { icon: "📶", title: "High-Speed Wi-Fi", desc: "Stay connected with blazing fast and secure internet available throughout the hotel." },
+  { icon: "✈️", title: "Airport Pickup", desc: "Comfortable airport transfer services for guests arriving from near and far." },
+  { icon: "🧺", title: "Laundry Service", desc: "Quick and premium laundry support during your stay so you always look your best." },
+];
+
+const whyUs = [
+  "24/7 Room Service",
+  "Luxury & Comfortable Stay",
+  "Prime Peaceful Location",
+  "Professional Hospitality Staff",
+  "Fast Check-In & Check-Out",
+  "Trusted by Thousands of Guests",
+];
 
 const Services = () => {
   return (
-    <section className="services-section">
+    <div className="page-wrapper">
 
-      {/* Banner Section */}
-      <div className="services-banner">
-        <h1>Our Premium Services</h1>
-        <p>
-          Experience luxury, comfort, and world-class hospitality at
-          Blue Berry Hotel with our premium guest services.
-        </p>
+      {/* Banner */}
+      <div className="page-hero services-hero">
+        <div className="page-hero-overlay" />
+        <motion.div
+          className="page-hero-content"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1>Our Premium Services</h1>
+          <p>World-class amenities crafted to make every moment of your stay exceptional</p>
+          <div className="hero-gold-line" />
+        </motion.div>
       </div>
 
-      {/* Services Cards */}
-      <div className="services-container">
-
-        <div className="service-card">
-          <div className="service-icon">🛏</div>
-          <h2>Luxury Rooms</h2>
-          <p>
-            Spacious deluxe rooms and premium suites designed for
-            comfort, elegance, and peaceful relaxation.
-          </p>
-        </div>
-
-        <div className="service-card">
-          <div className="service-icon">🍽</div>
-          <h2>Fine Dining</h2>
-          <p>
-            Enjoy delicious cuisines, elegant dining spaces,
-            and unforgettable food experiences.
-          </p>
-        </div>
-
-        <div className="service-card">
-          <div className="service-icon">🏊</div>
-          <h2>Swimming Pool & Spa</h2>
-          <p>
-            Refresh your mind and body with our luxury pool,
-            wellness spa, and relaxing treatments.
-          </p>
-        </div>
-
-        <div className="service-card">
-          <div className="service-icon">💍</div>
-          <h2>Wedding & Events</h2>
-          <p>
-            Perfect banquet halls and event spaces for weddings,
-            parties, and special celebrations.
-          </p>
-        </div>
-
-        <div className="service-card">
-          <div className="service-icon">🚗</div>
-          <h2>Free Parking</h2>
-          <p>
-            Safe and spacious parking with 24/7 security
-            for all hotel guests.
-          </p>
-        </div>
-
-        <div className="service-card">
-          <div className="service-icon">📶</div>
-          <h2>High-Speed Wi-Fi</h2>
-          <p>
-            Stay connected with fast and secure internet
-            available throughout the hotel.
-          </p>
-        </div>
-
-      </div>
-
-      {/* Why Choose Us Section */}
-      <div className="why-choose-section">
-        <h2>Why Choose Blue Berry Hotel?</h2>
-
-        <div className="choose-grid">
-          <div className="choose-box">✔ 24/7 Room Service</div>
-          <div className="choose-box">✔ Luxury & Comfortable Stay</div>
-          <div className="choose-box">✔ Prime Peaceful Location</div>
-          <div className="choose-box">✔ Professional Hospitality Staff</div>
-          <div className="choose-box">✔ Fast Check-In & Check-Out</div>
-          <div className="choose-box">✔ Trusted by Thousands of Guests</div>
-        </div>
-      </div>
-
-      {/* Additional Features Section */}
-      <div className="extra-services">
-        <h2>Additional Guest Facilities</h2>
-
-        <div className="extra-grid">
-          <div className="extra-box">
-            <h3>Airport Pickup</h3>
-            <p>Comfortable airport transfer services for guests.</p>
+      {/* Services Grid */}
+      <section className="pg-section bg-light">
+        <div className="pg-container">
+          <div className="pg-section-title">
+            <h2>What We Offer</h2>
+            <p>A complete range of luxury hotel services for your comfort</p>
+            <div className="pg-divider" />
           </div>
-
-          <div className="extra-box">
-            <h3>Conference Rooms</h3>
-            <p>Professional meeting spaces for business events.</p>
-          </div>
-
-          <div className="extra-box">
-            <h3>Laundry Service</h3>
-            <p>Quick and premium laundry support during your stay.</p>
-          </div>
-
-          <div className="extra-box">
-            <h3>Travel Assistance</h3>
-            <p>Tour guidance and travel support for your convenience.</p>
+          <div className="services-pg-grid">
+            {servicesList.map((s, i) => (
+              <motion.div
+                key={i}
+                className="spg-card"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.07, duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <div className="spg-icon">{s.icon}</div>
+                <h3>{s.title}</h3>
+                <p>{s.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
 
-    </section>
-  )
-}
+      {/* Why Choose Us */}
+      <section className="pg-section bg-dark-navy">
+        <div className="pg-container">
+          <div className="pg-section-title white">
+            <h2>Why Choose Blue Berry Hotel?</h2>
+            <p>Reasons thousands of guests keep coming back</p>
+            <div className="pg-divider" />
+          </div>
+          <div className="why-grid">
+            {whyUs.map((item, i) => (
+              <motion.div
+                key={i}
+                className="why-card"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: i * 0.08 }}
+                viewport={{ once: true }}
+              >
+                <span className="why-check">✓</span>
+                <span>{item}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-export default Services
+    </div>
+  );
+};
+
+export default Services;

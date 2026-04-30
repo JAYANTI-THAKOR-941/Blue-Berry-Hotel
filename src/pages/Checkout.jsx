@@ -36,10 +36,10 @@ const Checkout = () => {
     try{
       const updatedCheckoutData = {
         ...form,
-        roomNumber:roomNumber,
+        roomNumber: room?.roomNumber || "",
         totalAmount : Number(form.totalNights * discountedPrice)
       }
-      await api.post('/bookings',form);
+      await api.post('/bookings', updatedCheckoutData);
       alert('Room booked successfully.')
       navigate('/');
     } 

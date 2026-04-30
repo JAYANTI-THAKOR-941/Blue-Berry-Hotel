@@ -250,7 +250,7 @@
 
 /* room page design */
 .rooms {
-  padding: 60px 8%;
+  padding: 40px 8% 60px;
   background: #f8fafc;
   text-align: center;
 }
@@ -339,8 +339,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  padding: 60px 8%;
+  padding: 50px 8% 60px;
   background: #f8fafc;
+  min-height: calc(100vh - 72px);
 }
 
 /* Image Section */
@@ -467,7 +468,7 @@
 /* Layout */
 .auth-wrapper {
   display: flex;
-  height: 100vh;
+  min-height: calc(100vh - 72px);
 }
 
 /* LEFT SIDE */
@@ -602,7 +603,7 @@
   background: linear-gradient(to right, #c59d5f, #a67c3d);
   color: white;
   text-align: center;
-  padding: 100px 20px;
+  padding: 70px 20px 60px;
 }
 
 .about-banner h1 {
@@ -791,7 +792,7 @@
   background: linear-gradient(to right, #c59d5f, #a67c3d);
   color: white;
   text-align: center;
-  padding: 100px 20px;
+  padding: 70px 20px 60px;
 }
 
 .contact-banner h1 {
@@ -957,7 +958,7 @@
   background: linear-gradient(to right, #c59d5f, #a67c3d);
   color: white;
   text-align: center;
-  padding: 100px 20px;
+  padding: 70px 20px 60px;
 }
 
 .services-banner h1 {
@@ -1121,17 +1122,13 @@
 }
 
 
-/* checkout.css */
-body {
-  font-family: Arial, sans-serif;
-  background: #f5f7fb;
-}
-
 /* MAIN LAYOUT */
 .checkout-page {
   display: flex;
   gap: 30px;
   padding: 30px;
+  padding-top: 40px;
+  min-height: calc(100vh - 72px);
 }
 
 /* LEFT SIDE */
@@ -1237,18 +1234,23 @@ body {
   margin-top: 10px;
 }
 
-button {
+/* checkout submit button only */
+.checkout-form button[type="submit"] {
   margin-top: 15px;
-  padding: 12px;
-  background: #4a90e2;
+  padding: 13px;
+  background: linear-gradient(135deg, #c59d5f, #a67c3d);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(197,157,95,0.35);
 }
-
-button:hover {
-  background: #357abd;
+.checkout-form button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(197,157,95,0.5);
 }
 
 /* RESPONSIVE */
